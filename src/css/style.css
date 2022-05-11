@@ -1,3 +1,27 @@
+.adv-item:nth-child(1) {
+  background-color: #009a00;
+}
+
+.adv-item:nth-child(2) {
+  background-color: #00b300;
+}
+
+.adv-item:nth-child(3) {
+  background-color: #00cd00;
+}
+
+.adv-item:nth-child(4) {
+  background-color: #00e600;
+}
+
+.adv-item:nth-child(5) {
+  background-color: #01ff01;
+}
+
+.adv-item:nth-child(6) {
+  background-color: #1aff1a;
+}
+
 body {
   font: 100% "Space Mono", monospace;
   color: #6b717f;
@@ -42,7 +66,7 @@ article #selling-points {
       flex-basis: 100%;
 }
 article code {
-  background: #000;
+  background: black;
   border: 1px solid #6b717f;
   color: #8C8C8C;
   page-break-inside: avoid;
@@ -79,7 +103,7 @@ article code .after {
 .messages .warning {
   background-color: orange;
 }
-.messages .error:hover {
+.messages :hover {
   background-color: green;
 }
 

@@ -1,12 +1,19 @@
 @use 'variable';
 @use 'mixin';
+
+$base-color: variable.$green;
+@for $i from 1 through 6 {
+  .adv-item:nth-child(#{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}
   
 body {
     font: 100% "Space Mono", monospace;
-    color: #6b717f;
+    color: variable.$cl2;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: variable.$blanc;
     overflow-x: hidden;
 }
 
@@ -22,12 +29,12 @@ article{
     & section{
     flex-grow: 1;
     flex-basis: 45%;
-    border: 1px #8C8C8C solid;
+    border: 1px variable.$cl3 solid;
     margin: 16px;
     clear: both;
     overflow: auto;
     box-sizing: border-box;
-    @include mixin.boxshadow(black);
+    @include mixin.boxshadow(variable.$black);
     }
 
     & #selling-points{
@@ -36,9 +43,9 @@ article{
     }
 
     & code{
-        background: #000;
-        border: 1px solid #6b717f;
-        color: #8C8C8C;
+        background: variable.$black;
+        border: 1px solid variable.$cl2;
+        color: variable.$cl3;
         page-break-inside: avoid;
         font-family: monospace;
         font-size: 15px;
@@ -63,9 +70,9 @@ article{
 }
 
 .messages{
-    border: 1px solid #8C8C8C;
+    border: 1px solid  variable.$cl3;
     padding: 16px;
-    color: #fff;
+    color: variable.$blanc;
 
     & .success{
         background-color: variable.$green;
@@ -79,7 +86,7 @@ article{
         background-color: variable.$orange;
     }
 
-    & .error:hover{
+    & :hover{
         background-color: variable.$green;
     }
 }   
