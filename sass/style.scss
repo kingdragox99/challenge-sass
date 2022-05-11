@@ -1,24 +1,33 @@
-$red:red;
-$green:green;
-$orange:orange;
+@use 'variable';
+@use 'mixin';
+  
+body {
+    font: 100% "Space Mono", monospace;
+    color: #6b717f;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+}
 
+main{
+    padding-bottom: 0;
+    }
 
 article{
     display: flex;
     flex-wrap: wrap;
+    padding: variable.$p10;
 
     & section{
     flex-grow: 1;
     flex-basis: 45%;
     border: 1px #8C8C8C solid;
-    -webkit-box-shadow: 10px 10px 15px -4px #6b717f;
-    -moz-box-shadow: 10px 10px 15px -4px #6b717f;
-    box-shadow: 10px 10px 15px -4px #6b717f;
-    padding: 16px;
     margin: 16px;
     clear: both;
     overflow: auto;
     box-sizing: border-box;
+    @include mixin.boxshadow(black);
     }
 
     & #selling-points{
@@ -26,6 +35,31 @@ article{
         flex-basis: 100%;
     }
 
+    & code{
+        background: #000;
+        border: 1px solid #6b717f;
+        color: #8C8C8C;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+
+        & .before{
+            float: left;
+            width: 40%;
+        }
+
+        & .after {
+            float: right;
+            width: 40%;
+        }
+    }
 }
 
 .messages{
@@ -34,18 +68,25 @@ article{
     color: #fff;
 
     & .success{
-        background-color: $green;
+        background-color: variable.$green;
     }
 
     & .error{
-        background-color: $red;
+        background-color: variable.$red;
     }
 
     & .warning{
-        background-color: $orange;
+        background-color: variable.$orange;
     }
 
     & .error:hover{
-        background-color: $green;
+        background-color: variable.$green;
+    }
+}   
+
+footer{
+
+    & h3{
+        padding: variable.$p10*2;
     }
 }
