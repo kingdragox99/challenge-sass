@@ -1,0 +1,48 @@
+article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+article section {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  border: 1px #8C8C8C solid;
+  -webkit-box-shadow: 10px 10px 15px -4px #6b717f;
+  box-shadow: 10px 10px 15px -4px #6b717f;
+  padding: 16px;
+  margin: 16px;
+  clear: both;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+article #selling-points {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.messages {
+  border: 1px solid #8C8C8C;
+  padding: 16px;
+  color: #fff;
+}
+.messages .success {
+  background-color: green;
+}
+.messages .error {
+  background-color: red;
+}
+.messages .warning {
+  background-color: orange;
+}
+.messages .error:hover {
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

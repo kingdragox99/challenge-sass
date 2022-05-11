@@ -1,0 +1,51 @@
+$red:red;
+$green:green;
+$orange:orange;
+
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+
+    & section{
+    flex-grow: 1;
+    flex-basis: 45%;
+    border: 1px #8C8C8C solid;
+    -webkit-box-shadow: 10px 10px 15px -4px #6b717f;
+    -moz-box-shadow: 10px 10px 15px -4px #6b717f;
+    box-shadow: 10px 10px 15px -4px #6b717f;
+    padding: 16px;
+    margin: 16px;
+    clear: both;
+    overflow: auto;
+    box-sizing: border-box;
+    }
+
+    & #selling-points{
+        flex-grow: 2;
+        flex-basis: 100%;
+    }
+
+}
+
+.messages{
+    border: 1px solid #8C8C8C;
+    padding: 16px;
+    color: #fff;
+
+    & .success{
+        background-color: $green;
+    }
+
+    & .error{
+        background-color: $red;
+    }
+
+    & .warning{
+        background-color: $orange;
+    }
+
+    & .error:hover{
+        background-color: $green;
+    }
+}
